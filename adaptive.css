@@ -1,0 +1,22 @@
+@media only screen and (min-width: 768px) {
+    .show_all {
+        display: flex;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+    #toggleButton {
+        display: flex;
+    }
+}
+
+
+@media only screen and (min-width: 1120px) {
+    .swiper-pagination {
+        display: none;
+    }
+    #toggleButton {
+        display: flex;
+    }
+}
+
