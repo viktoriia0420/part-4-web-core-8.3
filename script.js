@@ -1,4 +1,4 @@
-new Swiper('.swiper-container',{
+/*new Swiper('.swiper-container',{
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -24,7 +24,7 @@ new Swiper('.swiper-container',{
       
     }
   }
-});
+}); */
 
 
 
@@ -43,3 +43,39 @@ toggleButton.classList.toggle('expanded');
     toggleText.textContent = 'Показать еще';
   }
 });
+
+
+
+    let swiperInstance = null;
+
+    function toggleSwiper() {
+        const isMobile = window.innerWidth <= 767;
+        const swiperContainer = document.querySelector('.swiper-container');
+
+        if (!swiperContainer) return;
+
+        if (isMobile && !swiperInstance) {
+            swiperInstance = new Swiper('.swiper-container', {
+                slidesPerView: 1.3,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    550: {
+                        slidesPerView: 2.2,
+                    }
+                },
+                spaceBetween: 30,
+            });
+        } else if (!isMobile && swiperInstance) {
+            swiperInstance.destroy(true, true);
+            swiperInstance = null;
+        }
+    }
+
+  
+    window.addEventListener('load', toggleSwiper);
+
+  
+    window.addEventListener('resize', toggleSwiper);
