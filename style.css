@@ -34,16 +34,25 @@ body{
     padding-top: 20px;
 }
 
+.swiper-wrapper {
+    max-height: 170px; 
+    overflow: hidden;
+}
+
+.swiper-wrapper.all {
+    max-height:fit-content;
+}
+
 .swiper-slide {
-  width: 224px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  border: 1px solid #EAEAEA;
-  border-radius: 7px;
-  padding: 0 15px;               
-  background-color: #FFF;
-  box-sizing: border-box;        
+   width: 224px;
+   height: 72px;
+   display: flex;
+   align-items: center;
+   border: 1px solid #EAEAEA;
+   border-radius: 7px;
+   padding: 0 15px;               
+   background-color: #FFF;
+   box-sizing: border-box;        
 }
 .image-slider {
     display: flex;
@@ -82,5 +91,4 @@ body{
     width: 224px;
     height: 72px;
     display: flex;
-
 }
